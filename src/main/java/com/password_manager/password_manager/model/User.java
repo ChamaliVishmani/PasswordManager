@@ -23,4 +23,9 @@ public class User {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,orphanRemoval = true)
     private List<Vault> vaults;
+
+    public User(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
+    }
 }
